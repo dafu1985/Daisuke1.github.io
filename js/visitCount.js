@@ -1,33 +1,33 @@
-<!-- –K–âÒƒJƒEƒ“ƒg—p‚ÌƒXƒNƒŠƒvƒg -->
+<!-- è¨ªå•è€…ã‚«ã‚¦ãƒ³ãƒˆç”¨ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆ -->
 <script>
 console.log('Script loaded');
 
-    //ƒJƒEƒ“ƒg‚ğƒ[ƒJƒ‹ƒXƒgƒŒ[ƒW‚©‚çæ“¾
+    //ã‚«ã‚¦ãƒ³ãƒˆã‚’ãƒ­ãƒ¼ã‚«ãƒ«ã‚¹ãƒˆãƒ¬ãƒ¼ã‚¸ã‹ã‚‰å–å¾—
     let visitCount = localStorage.getItem('visitCount');
     
     console.log('Visit count from local storage:', visitCount);
 
-    //ƒJƒEƒ“ƒg‚ª‘¶İ‚µ‚È‚¢ê‡‚Í‰Šú‰»
+    //ã‚«ã‚¦ãƒ³ãƒˆãŒå­˜åœ¨ã—ãªã„å ´åˆã¯åˆæœŸåŒ–
     if(visitCount === null) {
        visitCount = 0 ;
     } else {
-    //•¶š—ñ‚©‚ç”’l‚É•ÏŠ·
+    //æ–‡å­—åˆ—ã‹ã‚‰æ•°å€¤ã«å¤‰æ›
        visitCount = parseInt(visitCount);
     }
 
 console.log('Visit count before:', visitCount);
 
-// ƒJƒEƒ“ƒg‚ğ‘‚â‚·
+// ã‚«ã‚¦ãƒ³ãƒˆã‚’å¢—ã‚„ã™
 visitCount++;
 
 console.log('Visit count after increment:', visitCount);
 
-// ƒJƒEƒ“ƒg‚ğƒ[ƒJƒ‹ƒXƒgƒŒ[ƒW‚É•Û‘¶
+// ã‚«ã‚¦ãƒ³ãƒˆã‚’ãƒ­ãƒ¼ã‚«ãƒ«ã‚¹ãƒˆãƒ¬ãƒ¼ã‚¸ã«ä¿å­˜
 localStorage.setItem('visitCount', visitCount);
 
 console.log('Visit count after saving to localStorage:', visitCount);
 
-// ƒJƒEƒ“ƒg‚ğHTML‚É•\¦
+// ã‚«ã‚¦ãƒ³ãƒˆã‚’HTMLã«è¡¨ç¤º
 document.getElementById('visitCount').textContent = visitCount;
 
 console.log('Visit count after updating HTML:', visitCount);
