@@ -38,3 +38,17 @@ $(function () {
     return false;
   });
 });
+
+ // カウントアップのスクリプト
+  let visitCount = localStorage.getItem('visitCount');
+
+  if (visitCount === null) {
+    visitCount = 0;
+  } else {
+    visitCount = parseInt(visitCount);
+  }
+
+  visitCount++;
+  localStorage.setItem('visitCount', visitCount);
+  document.getElementById('visitCount').textContent = visitCount;
+});
