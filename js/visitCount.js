@@ -1,6 +1,5 @@
 <!-- 訪問者カウント用のスクリプト -->
 <script>
-console.log('Script loaded');
 
     //カウントをローカルストレージから取得
     let visitCount = localStorage.getItem('visitCount');
@@ -32,4 +31,4 @@ document.getElementById('visitCount').textContent = visitCount;
 
 console.log('Visit count after updating HTML:', visitCount);
 
- </script>
+</script>
