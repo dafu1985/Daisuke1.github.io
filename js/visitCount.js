@@ -1,7 +1,11 @@
 <!-- 訪問者カウント用のスクリプト -->
 <script>
+console.log('Script loaded');
+
     //カウントをローカルストレージから取得
     let visitCount = localStorage.getItem('visitCount');
+    
+    console.log('Visit count from local storage:', visitCount);
 
     //カウントが存在しない場合は初期化
     if(visitCount === null) {
@@ -11,12 +15,21 @@
        visitCount = parseInt(visitCount);
     }
 
-    //カウントを増やす
-    visitCount++ ;
-    
-    //カウントをローカルストレージに保存
-    localStorage.setItem('visitCount', visitCount);
-    
-    //カウントをHTMLに表示
-    document.getElementById('visitCount').textContent = visitCount;
+console.log('Visit count before:', visitCount);
+
+// カウントを増やす
+visitCount++;
+
+console.log('Visit count after increment:', visitCount);
+
+// カウントをローカルストレージに保存
+localStorage.setItem('visitCount', visitCount);
+
+console.log('Visit count after saving to localStorage:', visitCount);
+
+// カウントをHTMLに表示
+document.getElementById('visitCount').textContent = visitCount;
+
+console.log('Visit count after updating HTML:', visitCount);
+
  </script>
